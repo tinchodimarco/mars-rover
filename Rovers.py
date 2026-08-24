@@ -9,11 +9,11 @@ class Rover:
         self.orientacion = orientacion
 
 
-    def informa_posicion():
-        rover = Rover(0, 0, "Norte")
-        return (rover.x, rover.y, rover.orientacion)
+    def informa_posicion(self):
+        return (self.x, self.y, self.orientacion)
 
-    def girar_derecha(self): 
+    def girar_derecha(self):
+     
         if self.orientacion == "Norte":
          self.orientacion = "Este"
         elif self.orientacion == "Este":

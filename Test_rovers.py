@@ -24,4 +24,9 @@ def test_girar_izquierda():
     assert rover.y == (0)
     assert rover.orientacion == ("Oeste")
 
-
+def test_avanza_una_celda():
+    rover = Rover(0, 0, "Norte")
+    rover.avanza_una_celda()
+    assert rover.x == (0)
+    assert rover.y == (1)
+    assert rover.orientacion == ("Norte")
