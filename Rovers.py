@@ -18,20 +18,19 @@ class Rover:
         elif comando == "B":
             self.retroceder_una_celda()
 
-
     def informa_posicion(self):
         return (self.x, self.y, self.orientacion)
 
     def girar_derecha(self):
-     
         if self.orientacion == "Norte":
             self.orientacion = "Este"
         elif self.orientacion == "Este":
             self.orientacion = "Sur"
         elif self.orientacion == "Sur":
-         self.orientacion = "Oeste"
+            self.orientacion = "Oeste"
         elif self.orientacion == "Oeste":
-         self.orientacion = "Norte"
+            self.orientacion = "Norte"
+
         return (self.x, self.y, self.orientacion)
 
     def girar_izquierda(self): 
@@ -40,12 +39,13 @@ class Rover:
         elif self.orientacion == "Oeste":
             self.orientacion = "Sur"
         elif self.orientacion == "Sur":
-             self.orientacion = "Este"
+            self.orientacion = "Este"
         elif self.orientacion == "Este":
             self.orientacion = "Norte"
+
         return (self.x, self.y, self.orientacion)
 
-    def avanza_una_celda(self):
+    def avanzar_una_celda(self):
         if self.orientacion == "Norte":
             self.y += 1
         elif self.orientacion == "Este":
@@ -54,7 +54,18 @@ class Rover:
             self.y -= 1
         elif self.orientacion == "Oeste":
             self.x -= 1
+
         return (self.x, self.y, self.orientacion)
 
+    def retroceder_una_celda(self):
+        if self.orientacion == "Norte":
+            self.y -= 1
+        elif self.orientacion == "Sur":
+            self.y += 1
+        elif self.orientacion == "Este":
+            self.x -= 1
+        elif self.orientacion == "Oeste":
+            self.x += 1
 
+        return (self.x, self.y, self.orientacion)
    
