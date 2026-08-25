@@ -30,3 +30,10 @@ def test_avanza_una_celda():
     assert rover.x == (0)
     assert rover.y == (1)
     assert rover.orientacion == ("Norte")
+
+def test_retroceder_una_celda():
+    rover = Rover(0, 0, "Norte")
+    rover.retroceder_una_celda()
+    assert rover.x == 0
+    assert rover.y == -1
+    assert rover.orientacion == "Norte"
